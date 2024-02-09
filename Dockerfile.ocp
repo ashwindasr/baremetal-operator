@@ -1,4 +1,4 @@
-FROM registry.ci.openshift.org/ocp/builder:rhel-9-golang-1.21-openshift-4.16 AS builder
+FROM registry-proxy.engineering.redhat.com/rh-osbs/openshift-golang-builder:v1.21.3-202401221732.el9.g00c615b AS builder
 WORKDIR /go/src/github.com/metal3-io/baremetal-operator
 COPY . .
 RUN make manager
